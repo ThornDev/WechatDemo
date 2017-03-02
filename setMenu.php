@@ -4,9 +4,9 @@ require 'fetchTokenUtil.php';
 $data = array(
     "button" => array(
         array(
-            "type" => "view",
+            "type" => "click",
             "name" => urlencode("服务"),
-            "url" => "http://120.25.153.95/www/phpinfo.php"
+            "key" => urlencode("获取信息")
         ),
         array(
             "name" => "Menu",
@@ -19,7 +19,7 @@ $data = array(
                 array(
                     "type" => "view",
                     "name" => "Video",
-                    "url" => "http://v.qq.com/"
+                    "url" => "http://120.25.153.95/www/notifySendLocation.php"
                 ),
                 array(
                     "type" => "click",
