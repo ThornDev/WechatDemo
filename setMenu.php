@@ -5,7 +5,7 @@ $data = array(
     "button" => array(
         array(
             "type" => "click",
-            "name" => urlencode("服务"),
+            "name" => urlencode("获取信息"),
             "key" => urlencode("获取信息")
         ),
         array(
