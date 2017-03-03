@@ -19,7 +19,7 @@ $data = array(
                 array(
                     "type" => "view",
                     "name" => "Video",
-                    "url" => "http://120.25.153.95/www/notifySendLocation.php"
+                    "url" => "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx8f930674b4309a73&redirect_uri=http%3A%2F%2Fthornvbear.tech%2F2016%2F07%2F28%2FTest-page%2F&response_type=code&scope=snsapi_base&state=1#wechat_redirect"
                 ),
                 array(
                     "type" => "click",
