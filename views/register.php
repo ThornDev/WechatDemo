@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewpoint" content="width=device-width,initial-scale=1,user-scalable=0">
-<title>登录界面</title>
+<title>注册</title>
 <link rel="stylesheet" href="../css/weui.css"/>
 <link rel="stylesheet" href="../css/example.css"/>
 <link rel="stylesheet" href="../css/docs.min.css"/>
@@ -16,11 +16,11 @@
 			<div class="page__bd">
 				<div style="padding-left: 10px;">
 					
-						<div class="bs-callout bs-callout-info">登录信息</div>
+						<div class="bs-callout bs-callout-info">注册信息</div>
 					
 					
 				</div>
-				<form id="driver-info-form" class="weui-cells weui-cells_form" action="welcome.php" method="post">
+				<form id="driver-info-form" class="weui-cells weui-cells_form" action="user/bind-driver-action" method="post">
 					<div class="weui-cell">
 						<div class="weui-cell__hd">
 							<label class="weui-label">用户名</label>
@@ -34,7 +34,40 @@
 							<label class="weui-label">密码</label>
 						</div>
 						<div class="weui-cell__bd">
-							<input class="weui-input" type="password" name="name"  placeholder="请输入密码">
+							<input class="weui-input" type="password" name="password"  placeholder="请输入密码">
+						</div>
+					</div>
+					<div class="weui-cell">
+						<div class="weui-cell__hd">
+							<label class="weui-label">确认密码</label>
+						</div>
+						<div class="weui-cell__bd">
+							<input class="weui-input" type="password" name="surepassword"  placeholder="请确认密码">
+						</div>
+					</div>
+					<div class="weui-cell">
+						<div class="weui-cell__hd">
+							<label class="weui-label">性别</label>
+						</div>
+						<div class="weui-cell__bd">
+							<input class="weui-cells_radio" type="radio" name="sex" value="male"/>男
+							<input class="weui-cells_radio" type="radio" name="sex" value="female"/>女
+						</div>
+					</div>
+					<div class="weui-cell">
+						<div class="weui-cell__hd">
+							<label class="weui-label">生日</label>
+						</div>
+						<div class="weui-cell__bd">
+							<input class="weui-input" type="text" name="birthday"  placeholder="请选择出生日期">
+						</div>
+					</div>
+					<div class="weui-cell">
+						<div class="weui-cell__hd">
+							<label class="weui-label">手机号</label>
+						</div>
+						<div class="weui-cell__bd">
+							<input class="weui-input" type="text" name="phone"  placeholder="请输入手机号">
 						</div>
 					</div>
 					<label for="weuiAgree" class="weui-agree"> <input id="agree" name="agree" type="checkbox" class="weui-agree__checkbox"> <span class="weui-agree__text"> 阅读并同意<a
@@ -44,7 +77,7 @@
 
 					<div class="weui-btn-area">
 						
-							<button class="weui-btn weui-btn_primary" id="submit_btn">登录</button>
+							<button class="weui-btn weui-btn_primary" id="submit_btn">注册</button>
 						
 						
 					</div>
