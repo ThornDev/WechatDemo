@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="viewpoint" content="width=device-width,initial-scale=1,user-scalable=0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
 <title>注册</title>
 <link rel="stylesheet" href="../css/weui.css"/>
 <link rel="stylesheet" href="../css/example.css"/>
@@ -20,13 +20,13 @@
 					
 					
 				</div>
-				<form id="driver-info-form" class="weui-cells weui-cells_form" action="user/bind-driver-action" method="post">
+				<form id="driver-info-form" class="weui-cells weui-cells_form" action="../class/user_reg.php" method="post">
 					<div class="weui-cell">
 						<div class="weui-cell__hd">
 							<label class="weui-label">用户名</label>
 						</div>
 						<div class="weui-cell__bd">
-							<input class="weui-input"  name="nickname" type="text" placeholder="请输入用户名">
+							<input class="weui-input"  name="username" type="text" placeholder="请输入用户名">
 						</div>
 					</div>
 					<div class="weui-cell">
@@ -50,8 +50,8 @@
 							<label class="weui-label">性别</label>
 						</div>
 						<div class="weui-cell__bd">
-							<input class="weui-cells_radio" type="radio" name="sex" value="male"/>男
-							<input class="weui-cells_radio" type="radio" name="sex" value="female"/>女
+							<input class="weui-cells_radio" type="radio" name="sex" value="1" checked="true"/>男
+							<input class="weui-cells_radio" type="radio" name="sex" value="0"/>女
 						</div>
 					</div>
 					<div class="weui-cell">
@@ -77,7 +77,7 @@
 
 					<div class="weui-btn-area">
 						
-							<button class="weui-btn weui-btn_primary" id="submit_btn">注册</button>
+							<input class="weui-btn weui-btn_primary" id="submit_btn" type="submit" value="注册">
 						
 						
 					</div>

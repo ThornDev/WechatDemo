@@ -19,7 +19,7 @@ $data = array(
                 array(
                     "type" => "view",
                     "name" => "Video",
-                    "url" => "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx8f930674b4309a73&redirect_uri=http%3a%2f%2fdev.thornvbear.tech%2ftestPage.php&response_type=code&scope=snsapi_base&state=123#wechat_redirect"
+                    "url" => "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx8f930674b4309a73&redirect_uri=http%3a%2f%2fdev.thornvbear.tech%2fviews%2flogin.php&response_type=code&scope=snsapi_base&state=123#wechat_redirect"
                 ),
                 array(
                     "type" => "click",
