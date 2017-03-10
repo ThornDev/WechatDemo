@@ -9,7 +9,7 @@ $data = array(
             "key" => urlencode("获取信息")
         ),
         array(
-            "name" => "Menu",
+            "name" => urlencode("菜单"),
             "sub_button" => array(
                 array(
                     "type" => "view",
@@ -18,8 +18,8 @@ $data = array(
                 ),
                 array(
                     "type" => "view",
-                    "name" => "Video",
-                    "url" => "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx8f930674b4309a73&redirect_uri=http%3a%2f%2fdev.thornvbear.tech%2fviews%2flogin.php&response_type=code&scope=snsapi_base&state=123#wechat_redirect"
+                    "name" => urlencode("测试"),
+                    "url" => "http://dev.thornvbear.tech/request_auth.php"
                 ),
                 array(
                     "type" => "click",
