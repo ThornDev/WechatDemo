@@ -1,14 +1,14 @@
 <?php
 header('content-type:text/html;charset=utf-8');
-$username = $_POST['username'];
-$password = $_POST['password'];
+$username = $_GET['username'];
+$password = $_GET['password'];
 include 'conn.php';
-// 查询用户名是否存在
+// // 查询用户名是否存在
 $password = md5($password);
 $check_query = mysql_query("select id from user where username='$username' and password='$password' limit 1");
 if (!mysql_fetch_array($check_query)) {
-    echo '错误：用户名'.$username.'不存在或者密码错误<a href="javascript:history.back(-1);">返回</a>';
-    exit();
+    echo 'var login=false';
 }else{
-    header("Location:../views/welcome.php");
+    setcookie('username',$username);
+    echo "var login=true";
 }

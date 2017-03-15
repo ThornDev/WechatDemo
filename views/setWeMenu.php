@@ -9,15 +9,19 @@
 
     <p>This page uses frames. The current browser you are using does not support frames.</p>
     <?php
-        require '../fetchTokenUtil.php';
-        $faccess_token = fetchToken();
+//         include_once  '../fetchTokenUtil.php';
+        include_once '../data/wechat_user_data.inc.php';
+        include '../class/util/access_token_sdk.php';
+//         $faccess_token = fetchToken();
+        $accesstokensdk = new ACCESSTOKENSDK(APPID, APPSCRETE);
+        $faccesstoken = $accesstokensdk->getAccessToken();
         echo '<br>';
         echo 'hello';
         echo '<br>';
-        echo $faccess_token;
+        echo $faccesstoken;
         echo "<br>";
 	?>
-	 <input type="text" name="token" value='<?php echo $faccess_token;?>' >
+	 <input type="text" name="token" value='<?php echo $faccesstoken;?>' >
 	<input type="submit" value="修改菜单">
 </form>
  </body>

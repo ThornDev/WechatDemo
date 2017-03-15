@@ -1,10 +1,12 @@
 <?php
 header("Content-Type: text/html;charset=utf-8");
 require 'apiModel.php';
+require 'data/wechat_user_data.inc.php';
 $access_token = "";
 function fetchToken(){
-    $appid = 'wx8f930674b4309a73';
-    $appsecret = '22931074e809cb5e97d9194b1960ef0e';
+    
+    $appid = APPID;
+    $appsecret = APPSCRETE;
     session_start();
     $_SESSION['access_token'] = null;
     $_SESSION['expire_time'] = null;
