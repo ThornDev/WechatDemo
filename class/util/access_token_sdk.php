@@ -1,10 +1,8 @@
 <?php
-define("FILEPATH", $_SERVER['DOCUMENT_ROOT']);
+
 class ACCESSTOKENSDK
 {
-
     private $appId;
-
     private $appSecret;
 
     public function __construct($appId, $appSecret)
@@ -16,9 +14,11 @@ class ACCESSTOKENSDK
     public function getAccessToken()
     {
         // access_token 应该全局存储与更新，以下代码以写入到文件中做示例
-        include '../class/util/util_control.php';
-        include_once  FILEPATH.'/WechatDemo/apiModel.php';
-        $file_path = FILEPATH.'/WechatDemo/data/access_token.php';
+        $dir = dirname(__FILE__);
+        include $dir.'../util_control.php';
+        include_once  PROJECTPATH.'/curlRequest.php';
+        
+        $file_path = PROJECTPATH.'/data/access_token.php';
         $data = json_decode(get_php_file($file_path));
         if ($data->expire_time < time()) {
             // 如果是企业号用以下URL获取access_token
@@ -28,6 +28,7 @@ class ACCESSTOKENSDK
             $post_data['secret'] = $this->appSecret;
             $res = request_post($url, $post_data);
             $json = json_decode($res);
+            echo "网络获取";
             $access_token = $json->access_token;
             if ($access_token) {
                 $data->expire_time = time() + 7000;
@@ -35,6 +36,7 @@ class ACCESSTOKENSDK
                 set_php_file($file_path, json_encode($data));
             }
         } else {
+            echo "缓存获取";
             $access_token = $data->access_token;
         }
         return $access_token;

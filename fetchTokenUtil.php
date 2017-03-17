@@ -1,6 +1,6 @@
 <?php
 header("Content-Type: text/html;charset=utf-8");
-require 'apiModel.php';
+require 'curlRequest.php';
 require 'data/wechat_user_data.inc.php';
 $access_token = "";
 function fetchToken(){
